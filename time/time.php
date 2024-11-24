@@ -7,5 +7,5 @@ if($today ==$tomorrow)  {
     echo "<br>Акція закінчилася";
 }
 if($today !==$tomorrow)  {
-    echo "<br>Акція триває";
+    echo "<br>Акція триває"; 
 }

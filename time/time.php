@@ -1,11 +1,14 @@
 <?php
 
-date_default_timezone_set('Europe/Kyiv');
-$startDate = strtotime('2023-12-31 20:00:00');
-$endDate = strtotime('2024-12-31 20:00:00');
+
+
+$startDate = time(); 
+$endDate = strtotime("10 September 2024");
 
 $timeRemaining = $endDate - $startDate;
-echo "Акція розпочалась 2023-12-31 20:00:00";
+
+echo date("l d F Y h:i:s A", $startDate);
+
 if ($timeRemaining <= 0) {
     echo "<h2>Акція закінчилась!</h2>";
 } else {
@@ -14,7 +17,6 @@ if ($timeRemaining <= 0) {
     $minutes = floor(($timeRemaining % (60 * 60)) / 60);
     $seconds = $timeRemaining % 60;
 
-    
-    echo "<p> Акція закінчиться: <span id='timer'>$days днів, $hours годин, $minutes хвилин, $seconds  секунд </span>.</p>";
+    echo "<p>Акція закінчиться через: <span id='timer'>$days днів, $hours годин, $minutes хвилин, $seconds секунд</span>.</p>";
 }
 ?>
